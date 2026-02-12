@@ -1,0 +1,70 @@
+/* Configuração de altura total */
+html,
+body {
+    height: 100%; /* Garante que tanto o HTML quanto o Body ocupem 100% da altura da tela */
+}
+
+/* Estilização do Body como um Container Flex */
+body {
+    background-color: aqua; /* Define a cor de fundo como ciano/aqua */
+    margin: 0; /* Remove margens padrão */
+    padding: 32px; /* Adiciona um respiro de 32px em volta de todo o conteúdo */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Define a família de fontes */
+
+    /* Ativa o Flexbox no Body */
+    display: flex; 
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center;     /* Centraliza o conteúdo verticalmente (só funciona porque a altura é 100%) */
+    flex-direction: column;  /* Empilha o título e a lista um em cima do outro */
+}
+
+/* Título principal */
+.main-title {
+    color: #385555; /* Define uma cor cinza-esverdeada escura para o texto */
+}
+
+/* Container da Lista */
+.list {
+    width: 90%; /* Ocupa 90% da largura disponível */
+    max-width: 960px; /* Não deixa a lista passar de 960px em telas grandes */
+    display: flex; /* Faz os itens da lista ficarem lado a lado */
+    flex-wrap: wrap; /* Se não couberem na mesma linha, eles pulam para a linha de baixo */
+    justify-content: center; /* Centraliza os itens da lista na linha */
+    gap: 16px; /* Cria um espaçamento de 16px entre cada item da lista (muito prático!) */
+    list-style-type: none; /* Remove as bolinhas da lista (ul) */
+}
+
+/* Cada Card da Lista */
+.list-item {
+    flex-basis: 280px; /* Define a largura base de cada card como 280px */
+    background-color: white; /* Cor de fundo do card */
+    border-radius: 5px; /* Arredonda levemente as pontas do card */
+    text-align: center; /* Centraliza o texto e imagens dentro do card */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2); /* Adiciona uma sombra suave para dar profundidade */
+    background-image: url(imagens/thumb02.jpg); /* Imagem de fundo no topo do card */
+    background-size: 100%; /* Faz a imagem ocupar toda a largura do card */
+    background-repeat: no-repeat; /* Impede que a imagem se repita caso o card seja longo */
+}
+
+/* Imagem de perfil dentro do card */
+.list-item__imagem img {
+    border-radius: 50%; /* Deixa a imagem redonda */
+    width: 80px; /* Define um tamanho fixo para a foto */
+    margin-top: 120px; /* Empurra a foto para baixo, para que ela fique "em cima" da borda da imagem de fundo */
+}
+
+/* Nome dentro do card */
+.list-item__name {
+    margin: 0; /* Remove margens padrão para controle preciso */
+    font-size: 24px; /* Tamanho do nome */
+    color: #385555; /* Cor combinando com o título principal */
+}
+
+/* Barra de ações (rodapé do card) */
+.list-item__action {
+    display: flex; /* Ativa flexbox para alinhar os botões/ícones da barra */
+    background-color: #e5e5e5; /* Fundo cinza claro para destacar a área de ação */
+    padding: 16px; /* Espaço interno */
+    justify-content: space-evenly; /* Distribui os itens com espaço igual entre eles e as bordas */
+    gap: 16px; /* Espaço mínimo entre os botões */
+}
