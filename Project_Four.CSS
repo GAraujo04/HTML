@@ -1,0 +1,73 @@
+/* Configurações globais da página */
+body {
+    margin: 0; /* Remove as margens padrão do navegador */
+    background-image: url(imagens/bg-2.jpg); /* Define a imagem de fundo de toda a página */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte (se a primeira não carregar, tenta as próximas) */
+}
+
+/* Seção principal de destaque (Cabeçalho) */
+.hero {
+    margin: 50px auto 0; /* 50px em cima, centraliza nas laterais (auto), 0 embaixo */
+    text-align: center;  /* Centraliza todos os textos e elementos dentro dessa div */
+    width: 70%;          /* Faz o container ocupar 70% da largura da tela */
+    color: white;        /* Cor do texto branca */
+}
+
+/* Estilo do título principal */
+.tittle {
+    font-size: 60px;             /* Tamanho da letra bem grande */
+    text-transform: uppercase;   /* Transforma todo o texto em MAIÚSCULO */
+    text-shadow: 2px 2px 2px black; /* Adiciona uma sombra preta para dar leitura sobre o fundo */
+    margin-bottom: 0;            /* Remove o espaço que vem por padrão abaixo do h1 */
+}
+
+/* Estilo da frase/barra de busca abaixo do título */
+.search__bar {
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.7); /* Preto com 70% de transparência */
+    border-radius: 6px;           /* Arredonda os cantos da caixa */
+    display: inline-block;        /* Faz a caixa envolver apenas o texto (não a linha toda) */
+    padding: 16px;                /* Espaço entre o texto e a borda da caixa preta */
+    border-bottom: 2px solid;     /* Cria uma linha fina na parte de baixo */
+}
+
+/* O container branco que organiza a grade de cards */
+.container-cards {
+    display: flex;        /* Ativa o modo flexbox para alinhar os filhos (cards) */
+    flex-wrap: wrap;      /* Se não couberem na linha, eles pulam para a de baixo automaticamente */
+    gap: 20px;            /* Cria um espaçamento de 20px entre cada card */
+    padding: 10px;        /* Espaço interno entre as bordas brancas e os cards */
+    background-color: white;
+    max-width: 950px;     /* Impede que o bloco branco estique demais em telas grandes */
+    margin: 70px auto;    /* Centraliza o bloco na horizontal e afasta 70px do topo */
+    justify-content: center; /* Centraliza os cards caso a última linha tenha menos de 3 */
+}
+
+/* Regras gerais para cada um dos 6 cards */
+.card {
+    width: 300px;         /* Largura fixa (300px * 3 = 900px, cabendo nos 950px do container) */
+    height: 180px;        /* Altura fixa dos cards */
+    display: flex;        /* Também vira flex para posicionar o título interno */
+    align-items: flex-end; /* Alinha o título (h2) no final (base) do card */
+    background-size: cover; /* Faz a imagem de fundo preencher o card sem sobrar espaços */
+    background-position: center; /* Centraliza a imagem dentro do card */
+}
+
+/* Estilo da tarja preta com o nome do curso dentro do card */
+.card h2 {
+    width: 100%;         /* Faz a tarja ocupar toda a largura do card */
+    margin: 0;           /* Remove margens padrão do h2 */
+    padding: 10px;       /* Espaço interno para o texto não encostar nas bordas */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto transparente (efeito vidro fosco) */
+    color: white;
+    font-size: 18px;
+    font-weight: normal; /* Remove o negrito padrão do h2 */
+}
+
+/* Atribuição de imagens específicas para cada classe de card */
+.seletores { background-image: url(imagens/card_01.png); }
+.posicionamento { background-image: url(imagens/card_02.jpg); }
+.fontes { background-image: url(imagens/card_03.jpg); }
+.flexbox { background-image: url(imagens/card_04.jpg); }
+.css { background-image: url(imagens/card_05.jpg); }
+.semantica { background-image: url(imagens/card_01.png); }
