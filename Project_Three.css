@@ -1,102 +1,113 @@
-body{
-    background-color: #0c1014;
-    color: white;
-    width: 90%;
-    max-width: 960px;
-    margin: 0 auto;
+/* Configurações Gerais do Corpo da Página */
+body {
+    background-color: #0c1014; /* Fundo cinza muito escuro (quase preto) */
+    color: white;               /* Texto padrão em branco */
+    width: 90%;                 /* Ocupa 90% da largura da tela */
+    max-width: 960px;           /* Limita a largura máxima para não esticar demais em monitores grandes */
+    margin: 0 auto;             /* Centraliza o bloco do site na horizontal */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Título Principal */
 .main-tittle {
-    text-transform: uppercase;
-    font-size: 62px;
-    text-align: center;
-    margin: 46px 0;
+    text-transform: uppercase;  /* Letras em maiúsculo */
+    font-size: 62px;            /* Fonte bem grande para destaque */
+    text-align: center;         /* Centraliza o texto */
+    margin: 46px 0;             /* Espaçamento em cima e embaixo */
 }
 
+/* Cabeçalho (Header) */
 .header {
-    display: flex;
+    display: flex;              /* Alinha os itens (logo e menu) lado a lado */
     background-color: black;
     padding: 16px;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Empurra o logo para a esquerda e o menu para a direita */
+    align-items: center;        /* Alinha verticalmente ao centro */
 }
 
 .header__logo {
     font-size: 36px;
     text-transform: uppercase;
     margin-left: 16px;
-    letter-spacing: 2px;
+    letter-spacing: 2px;        /* Espaçamento entre as letras do logo */
 }
 
-.header__nav ul{
-    display: flex;
-    list-style-type: none;
+/* Navegação do Cabeçalho */
+.header__nav ul {
+    display: flex;              /* Coloca os itens da lista em linha */
+    list-style-type: none;      /* Remove as bolinhas da lista */
     font-size: 18px;
-    gap: 16px;
+    gap: 16px;                  /* Espaço entre os links */
 }
 
-.header__nav a{
+.header__nav a {
     color: white;
-    text-decoration: none;
+    text-decoration: none;      /* Remove o sublinhado padrão do link */
     padding: 14px;
     border-radius: 6px;
 }
 
-.header__nav a:hover{
-    text-decoration: underline;
+.header__nav a:hover {
+    text-decoration: underline; /* Adiciona sublinhado quando passa o mouse */
 }
 
-a.header__nav--active{
-    background-color: #cbe300;
-    color: #0c1014;
-    pointer-events: none;
+/* Estilo para o link da página atual (Ativo) */
+a.header__nav--active {
+    background-color: #cbe300;  /* Fundo verde-limão/amarelo */
+    color: #0c1014;             /* Texto escuro para dar contraste */
+    pointer-events: none;       /* Impede que o usuário clique no link da página onde já está */
 }
 
+/* Seção de Planos de Preço */
 .pricing {
-    display: flex;
-    gap: 16px;
+    display: flex;              /* Coloca os cards de preços lado a lado */
+    gap: 16px;                  /* Espaço entre os cards */
 }
 
+/* Card Individual de Plano */
 .pricing-plan {
-    flex: 1;
-    background-color: #1f262c;
+    flex: 1;                    /* Faz com que todos os cards tenham a mesma largura */
+    background-color: #1f262c;  /* Fundo cinza levemente mais claro que o body */
     padding: 30px;
     border-radius: 6px;
-    box-shadow: 0 5px 12px 0 black;
+    box-shadow: 0 5px 12px 0 black; /* Sombra suave para dar profundidade */
     display: flex;
-    flex-direction: column;
+    flex-direction: column;     /* Alinha os itens internos do card um abaixo do outro */
 }
 
 .plan__title {
     text-transform: uppercase;
-    border-bottom: 2px solid #cbe300;
+    border-bottom: 2px solid #cbe300; /* Linha decorativa abaixo do título */
     margin-top: 0;
     padding-bottom: 10px;
     letter-spacing: 2px;
 }
 
-.pricing-plan p{
+.pricing-plan p {
     margin-top: 0;
 }
 
-.pricing-plan__price{
+.pricing-plan__price {
     font-size: 33px;
+    /* Aqui costuma vir o valor do plano */
 }
 
-.pricing-plan__features{
+/* Lista de Funcionalidades do Plano */
+.pricing-plan__features {
     margin: 0 0 35px;
-    color: #b5b5b5;
+    color: #b5b5b5;             /* Cinza claro para menos destaque que o preço */
     padding-left: 16px;
-    line-height: 1.8;
-    flex-grow: 1;
+    line-height: 1.8;           /* Aumenta o espaçamento entre as linhas */
+    flex-grow: 1;               /* Empurra o botão (CTA) sempre para o final do card */
 }
 
-.pricing-plan__features li::marker{
-    color: #cbe300;
+/* Estiliza a "bolinha" ou marcador da lista */
+.pricing-plan__features li::marker {
+    color: #cbe300;             /* Marcadores na cor verde-limão */
 }
 
-.pricing-plan__cta{
+/* Botão de Chamada para Ação (Call to Action) */
+.pricing-plan__cta {
     text-decoration: none;
     color: #0c1014;
     background-color: #cbe300;
@@ -108,8 +119,9 @@ a.header__nav--active{
     text-align: center;
 }
 
-.pricing-plan__cta:hover{
-    border: 2px solid #cbe300;
-    background-color: transparent;
-    color: white;
+/* Efeito de Hover no Botão */
+.pricing-plan__cta:hover {
+    border: 2px solid #cbe300;  /* Cria uma borda */
+    background-color: transparent; /* Remove o fundo */
+    color: white;               /* Muda o texto para branco (Efeito "vazado") */
 }
