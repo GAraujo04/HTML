@@ -1,0 +1,153 @@
+/* ===================================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   Serve para garantir que o site ignore as margens
+   padrão dos navegadores.
+   =================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho do elemento */
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #555;
+    line-height: 1.6; /* Melhora a leitura do texto */
+}
+
+/* ===================================================
+   2. HEADER (CABEÇALHO)
+   Aqui resolvemos o problema do alinhamento.
+   =================================================== */
+.hero {
+    display: flex;             /* Transforma em container flexível */
+    justify-content: space-around; /* Distribui espaço entre o logo e o menu */
+    align-items: center;       /* Centraliza os itens verticalmente */
+    background-color: #162028;    /* Fundo preto */
+    color: white;              /* Texto branco */
+    padding: 20px 5%;          /* Espaçamento interno */
+}
+
+.hero h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+/* Menu de navegação */
+.main_menu {
+    display: flex;             /* Faz os links ficarem lado a lado */
+    list-style: none;          /* Remove as "bolinhas" da lista */
+    gap: 30px;                 /* Espaçamento entre cada link */
+}
+
+.main_menu a {
+    color: #425564;
+    text-decoration: none;     /* Remove o sublinhado dos links */
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: 0.3s;          /* Efeito suave ao passar o mouse */
+    letter-spacing: 3px;
+}
+
+.main_menu a:hover {
+    color: #999;               /* Cor muda ao passar o mouse */
+}
+
+/* ===================================================
+   3. SEÇÃO DA IMAGEM PRINCIPAL (BANNER)
+   =================================================== */
+.picture img {
+    width: 100%;               /* Ocupa toda a largura da tela */
+    height: auto;              /* Ajusta a altura proporcionalmente */
+    display: block;            /* Evita espaços vazios embaixo da foto */
+}
+
+/* ===================================================
+   4. SEÇÃO SOBRE NÓS E PRODUTOS
+   =================================================== */
+.about_us {
+    padding: 80px 10%;         /* Espaço nas laterais e em cima/baixo */
+    text-align: center;        /* Aqui o text-align funciona para o texto! */
+}
+
+.about_us_tittle {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.about_us_text {
+    max-width: 800px;          /* Limita a largura para não ficar cansativo de ler */
+    margin: 0 auto 60px;       /* Centraliza o bloco e dá margem embaixo */
+    color: #555;
+}
+
+/* Grid de Imagens (As 3 modelos) */
+.about_us > div:last-child {
+    display: flex;             /* Coloca as 3 listas lado a lado */
+    justify-content: center;   /* Centraliza o grupo de fotos */
+    gap: 40px;                 /* Espaço entre as fotos */
+    flex-wrap: wrap;           /* Se a tela for pequena, elas pulam linha */
+}
+
+.about_us ul {
+    list-style: none;
+    width: 280px;              /* Largura de cada "card" de produto */
+}
+
+.about_us ul img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;         /* Corta a imagem sem esticá-la */
+    border-radius: 4px;        /* Arredonda levemente as pontas */
+}
+
+/* Estilização dos textos dos produtos */
+.about_us ul li:nth-child(2) { 
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.about_us ul li:last-child {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* ===================================================
+   5. SEÇÃO DE FECHAMENTO (COM BACKGROUND)
+   =================================================== */
+section:last-of-type {
+    padding: 100px 10%;
+    text-align: center;    
+    /* Configurações da Imagem de Fundo */
+    background-image: url('imagens/bg_detalhe.png');
+    background-size: cover;        /* Faz a imagem cobrir toda a seção sem sobrar espaço */
+}
+
+.summary {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.summary_text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300; /* Deixa a letra mais fina e elegante */
+}
+
+/* ===================================================
+   6. RODAPÉ (FOOTER)
+   =================================================== */
+.rodape {
+    background-color: #0b171f;
+    color: #6f8597;
+    padding: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
